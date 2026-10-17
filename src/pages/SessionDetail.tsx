@@ -5,6 +5,7 @@ import {
   ListChecks,
   MessagesSquare,
   Lightbulb,
+  HelpCircle,
   ExternalLink,
   CheckCircle2,
 } from 'lucide-react'
@@ -123,6 +124,25 @@ export default function SessionDetail() {
               </ul>
             </CardContent>
           </Card>
+        </section>
+      )}
+
+      {session.faq && session.faq.length > 0 && (
+        <section aria-labelledby="faq">
+          <h2 id="faq" className="mb-3 flex items-center gap-2 text-2xl font-bold">
+            <HelpCircle className="h-7 w-7 text-primary" aria-hidden />
+            Likely questions from members (FAQ)
+          </h2>
+          <div className="space-y-3">
+            {session.faq.map((item) => (
+              <Card key={item.q} className="bg-secondary/50">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold">Q: {item.q}</h3>
+                  <p className="mt-1 text-lg">{item.a}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </section>
       )}
 

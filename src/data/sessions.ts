@@ -35,6 +35,7 @@ export interface Session {
   tagline: string
   topics: string[]
   discussion?: string[]
+  faq?: { q: string; a: string }[]
   walkthroughs: Walkthrough[]
   lessons: Lesson[]
   resources: Resource[]
@@ -108,6 +109,20 @@ export const sessions: Session[] = [
         text: 'Downloading, moving, attaching, sharing and deleting one small file touches every part of information technology. Nothing we do on a device is ever "just one thing".',
       },
     ],
+    faq: [
+      {
+        q: 'If I delete it, is it gone forever?',
+        a: 'It goes to the Trash first; that’s why step 9 (emptying the Trash) is separate — it gives you a safety net.',
+      },
+      {
+        q: 'What’s the difference between attaching and a link?',
+        a: 'An attachment sends a copy to one person; a link lets many people view the same original file.',
+      },
+      {
+        q: 'Why do I need folders at all?',
+        a: 'Same reason as a filing cabinet at home — so you can find things again.',
+      },
+    ],
     resources: [
       { label: 'Session handout: What is the Point of IT?', url: DRIVE.pointOfIT, kind: 'pdf' },
       { label: 'ATLGroup Google Drive folder', url: DRIVE.groupFolder, kind: 'folder' },
@@ -152,6 +167,20 @@ export const sessions: Session[] = [
       {
         title: 'Our news sources are worth sharing',
         text: 'Everyone has websites they trust. Swapping our favourites is one of the easiest ways the group helps each other stay informed.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Is it too late for me to get comfortable with all this?',
+        a: 'Everyone in the group has felt that at some point. Comfort comes from repetition, not talent — that’s why we recap each week.',
+      },
+      {
+        q: 'Are the websites I use every day keeping my details safe?',
+        a: 'The big banks and government sites invest heavily in security. The weak point is usually a reused password or a scam message — which is exactly what we practise on Fridays.',
+      },
+      {
+        q: 'Should I be worried about AI?',
+        a: 'Like any tool, it helps or harms depending on how it’s used. Our AI sessions this term are about staying informed and in control.',
       },
     ],
     resources: [
@@ -219,6 +248,24 @@ export const sessions: Session[] = [
         text: 'Using a separate account — or a prepaid card from the supermarket — for online purchases means only ever risking small amounts.',
       },
     ],
+    faq: [
+      {
+        q: 'What happens if I forget my one master password?',
+        a: 'That’s the one password you must never lose — most of us keep it written down at home. Recovery is possible but slow, so a written copy in a safe place beats a simple password.',
+      },
+      {
+        q: 'If I delete a photo from my phone, is it gone from the cloud too?',
+        a: 'Usually yes — when backup is on, the phone and the cloud stay in sync, so deleting in one place deletes in both. Always check the bin before emptying it.',
+      },
+      {
+        q: 'Is a text-message code good enough for 2FA?',
+        a: 'Much better than no second step at all. It’s not perfect, which is why the Google Authenticator app is the stronger option — we’ll set it up together in a future session.',
+      },
+      {
+        q: 'Why not just use one good password everywhere?',
+        a: 'Because when one site has a leak — and sites do — every account with that password is at risk. Unique passwords contain the damage to one place.',
+      },
+    ],
     resources: [],
     status: 'recap',
   },
@@ -271,6 +318,20 @@ export const sessions: Session[] = [
       {
         title: 'Which devices still get updates',
         text: 'In Term 3 we checked the devices in the group: the S24 Ultra, A26 and A55 are still receiving security updates from their maker. The A50, A51, A52 and Galaxy S20/S21 are not — worth knowing when planning an upgrade.',
+      },
+    ],
+    faq: [
+      {
+        q: 'If Google saves my passwords, can someone at Google see them?',
+        a: 'Your saved passwords are locked to your account and stored encrypted — you need your phone\'s PIN or fingerprint to view them. Even so, never save your banking password anywhere except your head or a notebook at home.',
+      },
+      {
+        q: 'How do I know if a WhatsApp message is a scam?',
+        a: 'Treat any unexpected message about money, codes or links like a stranger at the door — verify by calling the person on a number you already have. When in doubt, do nothing and bring it to Friday.',
+      },
+      {
+        q: 'Does the BOM weather app cost anything?',
+        a: 'No — the Bureau of Meteorology app is free, with no ads. If an app store shows a paid "BOM weather" app, that is not the official one.',
       },
     ],
     resources: [
