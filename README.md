@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# ATLGroup Friday Sessions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Session recaps and walkthroughs for **ATLGroup**, the Friday technology group at
+Mount Street Neighbourhood House. This is a members' site: a place to recap
+what we covered each week, at our own pace.
 
-Currently, two official plugins are available:
+**Live site:** https://bennyp85.github.io/atlgroup-friday-sessions/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What's on the site
 
-## React Compiler
+- **Weekly session pages** — what we covered, step-by-step walkthroughs, and
+  the lessons we learned together, for every Friday session.
+- **Member FAQs** — the questions that come up every week, answered in plain
+  language.
+- **Term program** — session dates, special events, and the term outline.
+- **Shared lessons** — scam near-misses and discoveries from our discussions,
+  shared so the whole group benefits.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A note on privacy: recaps here share only the lessons we learn together —
+personal stories stay in the room. No member names or private details appear
+anywhere on the site.
 
-## Expanding the ESLint configuration
+## For maintainers
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The site is built with React + TypeScript + Vite.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install      # install dependencies
+npm run dev      # local dev server
+npm run build    # production build (output in dist/)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Content lives in `src/data/sessions.ts` — each session is one entry with its
+topics, walkthrough steps, lessons and FAQs. Editing that file is usually all
+that's needed after a Friday session.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Deployment
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The site auto-deploys to **GitHub Pages**. Every push to `main` rebuilds and
+publishes the site within a couple of minutes via the workflow in
+`.github/workflows/deploy.yml`. There is nothing to run or pay for manually.
