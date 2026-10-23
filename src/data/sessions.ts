@@ -68,6 +68,73 @@ const DRIVE = {
 
 export const sessions: Session[] = [
   {
+    id: 't4w4',
+    term: 'Term 4 2026',
+    week: 4,
+    dateLabel: 'Friday 30 October 2026',
+    title: 'A Safari Around Our Phones — the Settings Tour',
+    tagline:
+      'Laptops away! This fortnight we get curious about our own Android phones. Settings is the control room of the device — let’s wander through it together, one area at a time, with no pressure and nothing to break.',
+    topics: [
+      'Apps — choosing which app opens what (default apps)',
+      'Notifications — quietening the noisy ones',
+      'Storage — seeing what is using the space',
+      'Modes — what “Do Not Disturb” and friends actually do',
+      'Display — text size, brightness and dark mode',
+      'Accessibility — making the phone easier to see, hear and tap',
+      'Location — which apps know where we are',
+      'Safety & emergency — the features built in for peace of mind',
+    ],
+    discussion: [
+      'Which of these eight areas should we open first? We will vote on Friday.',
+      'What is one setting you changed and never regretted?',
+      'Which setting have you always been curious about but never dared to touch?',
+    ],
+    walkthroughs: [
+      {
+        title: 'Explore one setting, safely',
+        intro:
+          'Our golden rule for the next two weeks: looking is always free. Follow these steps and change one small thing — you will be surprised how un-scary it is.',
+        steps: [
+          { title: 'Open Settings', detail: 'Tap the gear-shaped Settings app, or swipe down twice from the top of the screen and tap the little gear.' },
+          { title: 'Pick one area', detail: 'Just browse the list — Apps, Display, Notifications. Read the names; nothing happens from reading.' },
+          { title: 'Change something small', detail: 'Font size or screen brightness are friendly starters. Move the slider and watch what happens.' },
+          { title: 'Not sure? Leave it', detail: 'If a switch or option is a mystery, leave it as it is and bring the question to Friday. Curiosity is welcome; guessing is not required.' },
+          { title: 'Change it back (or don’t)', detail: 'Almost everything in Settings can be undone. If you liked the change, keep it — the phone is yours.' },
+        ],
+      },
+    ],
+    lessons: [
+      {
+        title: 'Looking is free',
+        text: 'Nothing in Settings breaks from being read. The worst that happens is a change we do not like — and those can be changed back. Curiosity is how confidence grows.',
+      },
+      {
+        title: 'Small tweaks, big comfort',
+        text: 'Bigger text, fewer pings, a screen that is kinder at night — these tiny adjustments are what make a phone feel like it was made for us, not the other way around.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Will I break my phone by poking around in Settings?',
+        a: 'No — reading settings is completely safe, and almost every change can be undone. If you see something you do not understand, just leave it alone and ask the group on Friday.',
+      },
+      {
+        q: 'Why bother with all these options at all?',
+        a: 'Because a few small changes — larger text, fewer notifications, an easier-to-see screen — can make the phone noticeably more comfortable every single day.',
+      },
+      {
+        q: 'What is a “mode”, anyway?',
+        a: 'A preset that changes what your phone does in one tap — like silencing it overnight or while driving. Once set up, the phone looks after itself.',
+      },
+    ],
+    resources: [
+      { label: 'Android Help — official guides from Google', url: 'https://support.google.com/android', kind: 'link' },
+    ],
+    status: 'planned',
+    highlight: true,
+  },
+  {
     id: 't4w3',
     term: 'Term 4 2026',
     week: 3,
@@ -165,7 +232,6 @@ export const sessions: Session[] = [
       { label: 'ATLGroup Google Drive folder', url: DRIVE.groupFolder, kind: 'folder' },
     ],
     status: 'recap',
-    highlight: true,
   },
   {
     id: 't4w2',
