@@ -62,9 +62,111 @@ const DRIVE = {
     'https://docs.google.com/presentation/d/15KFwJD13bgEG3ZM-pQAV3QkGcviahIT4Q4GCksV_9wY/edit',
   aiToolsSlides:
     'https://docs.google.com/presentation/d/1Q2S3MCtip5qZS-PilWvVKwK3AC7mr6HplVp-djzijBs/edit',
+  passwordsMFA:
+    'https://drive.google.com/file/d/1lJznqjqzhOtz4QkMi1rLyr3PqQ-i48g_/view',
 }
 
 export const sessions: Session[] = [
+  {
+    id: 't4w3',
+    term: 'Term 4 2026',
+    week: 3,
+    dateLabel: 'Friday 23 October 2026',
+    title: 'Passwords, MFA & Moving Files Between Apps',
+    tagline:
+      'How a small hiccup passing the slides around became one of our best lessons: moving a PDF from WhatsApp to email and Google Drive, making strong passwords, and ticking off our Security tasks.',
+    topics: [
+      'Sharing files between apps: WhatsApp → email → Google Drive',
+      'Backing up our files to the ATLGroup Drive folder',
+      'What makes a password strong — with passwordmonster.com',
+      'Security tasks: two of three now complete',
+      'Captchas: why sites ask us to tick the box',
+    ],
+    discussion: [
+      'What went wrong when we passed the slides around on WhatsApp?',
+      'Which is easier: sending a file to yourself, or saving it straight to Drive?',
+      'Where should the group keep session files so everyone can find them?',
+    ],
+    walkthroughs: [
+      {
+        title: 'Send a PDF from WhatsApp to your own email',
+        intro:
+          'Handy when you want the file on your laptop and it is sitting in a WhatsApp chat on your phone.',
+        steps: [
+          { title: 'Open the chat', detail: 'In WhatsApp, open the conversation that has the PDF.' },
+          { title: 'Tap the file', detail: 'Tap the PDF so it opens full screen.' },
+          { title: 'Tap the three dots', detail: 'Top-right corner — then choose Share (or Send).' },
+          { title: 'Pick your email app', detail: 'Choose Gmail. The file is attached to a new email automatically.' },
+          { title: 'Address it to yourself', detail: 'Type your own email address, add a subject like "Week 2 slides", and tap Send.' },
+          { title: 'Open it on your laptop', detail: 'On the laptop, open your email, find the message, and download the attachment. The file has travelled from one app to another — nicely done.' },
+        ],
+      },
+      {
+        title: 'Save a WhatsApp PDF straight into the ATLGroup Drive folder',
+        intro:
+          'The better long-term home for our files: one original copy in the shared folder, instead of copies buried in chats. This doubles as a backup.',
+        steps: [
+          { title: 'Open the PDF in WhatsApp', detail: 'Tap the file in the chat so it opens full screen.' },
+          { title: 'Tap Share', detail: 'Three dots → Share, just like before.' },
+          { title: 'Choose Drive', detail: 'Pick the Google Drive icon from the share sheet.' },
+          { title: 'Sign in if asked', detail: 'Use your Google account — the same one you use for Gmail.' },
+          { title: 'Pick the ATLGroup folder', detail: 'Browse to My Drive → the ATLGroup folder and tap Save.' },
+          { title: 'Check on the laptop', detail: 'Open drive.google.com in the browser — the file is there for everyone, and it is safely backed up.' },
+        ],
+      },
+      {
+        title: 'Upload a file to the ATLGroup folder from your laptop',
+        intro:
+          'For when the file is already on the laptop — the same move as our Drive workout, worth practising until it is boring.',
+        steps: [
+          { title: 'Open Google Drive in the browser', detail: 'Go to drive.google.com and sign in.' },
+          { title: 'Open the ATLGroup folder', detail: 'Double-click our shared folder.' },
+          { title: 'Click New → File upload', detail: 'The New button is top-left.' },
+          { title: 'Choose the file', detail: 'Find the PDF in your Downloads folder and click Open.' },
+          { title: 'Watch it upload', detail: 'A little progress circle appears. When it finishes, the file is shared with the whole group.' },
+        ],
+      },
+    ],
+    lessons: [
+      {
+        title: 'A hiccup is a lesson in disguise',
+        text: 'Passing the slides around on WhatsApp got confusing — and turned into the group learning three different ways to move a file between apps. Every snag we hit on a Friday is future curriculum.',
+      },
+      {
+        title: 'WhatsApp is for chatting, Drive is for keeping',
+        text: 'Files sent through chats get buried, compressed and lost. The ATLGroup Drive folder is our library: one original copy, findable by everyone, and backed up.',
+      },
+      {
+        title: 'Test the pattern, never the real password',
+        text: 'passwordmonster.com shows how quickly a password falls — try a made-up one with the same style as yours. Never type your actual password into any website, even a checker.',
+      },
+      {
+        title: 'Every layer is a hurdle for scammers',
+        text: 'We completed two of our three Security tasks. Each extra step — a strong password, a second-factor code, even ticking a captcha box — makes it harder for anyone to pretend to be us.',
+      },
+    ],
+    faq: [
+      {
+        q: 'Why not just keep sending files through WhatsApp?',
+        a: 'Because chats bury files — scrolling back to find a PDF from three weeks ago is painful, and copies can be compressed. The Drive folder keeps one original that everyone can find.',
+      },
+      {
+        q: 'Is it safe to type a password into passwordmonster.com?',
+        a: 'Only ever test a made-up password with the same pattern as yours. Never type your real password into any website — a checker is for learning what makes passwords strong.',
+      },
+      {
+        q: 'What is the captcha actually checking?',
+        a: 'That you are human. Tick the box (and pick the traffic lights when asked) and you prove to the website it is dealing with a person, not an automated bot.',
+      },
+    ],
+    resources: [
+      { label: 'Session slides: Passwords & MFA (PDF)', url: DRIVE.passwordsMFA, kind: 'pdf' },
+      { label: 'Password Monster — password strength checker', url: 'https://www.passwordmonster.com/', kind: 'link' },
+      { label: 'ATLGroup Google Drive folder', url: DRIVE.groupFolder, kind: 'folder' },
+    ],
+    status: 'recap',
+    highlight: true,
+  },
   {
     id: 't4w2',
     term: 'Term 4 2026',
@@ -127,8 +229,7 @@ export const sessions: Session[] = [
       { label: 'Session handout: What is the Point of IT?', url: DRIVE.pointOfIT, kind: 'pdf' },
       { label: 'ATLGroup Google Drive folder', url: DRIVE.groupFolder, kind: 'folder' },
     ],
-    status: 'planned',
-    highlight: true,
+    status: 'recap',
   },
   {
     id: 't4w1',
