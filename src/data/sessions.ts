@@ -445,6 +445,14 @@ export const sessions: Session[] = [
 // Standalone lessons from our Friday discussions — shared anonymously.
 export const sharedLessons: Lesson[] = [
   {
+    title: '“Centrelink” texts are a favourite trick',
+    text: 'Another member received a message pretending to be from Centrelink, asking to confirm details or risk a payment being stopped. Services Australia never asks for personal details, logins or payment by SMS or email. If a message claims to be from Centrelink or Medicare, open the myGov app yourself or call the number from the official website — never the one in the message.',
+  },
+  {
+    title: 'You never owe a website your email',
+    text: 'Pop-ups asking for your email “to continue”, or offering a discount in exchange for it, are almost never mandatory. Look for the small “No thanks” or the X in the corner and simply click away. Every address we hand out is another door for scammers — the smaller our online footprint, the less there is to steal.',
+  },
+  {
     title: 'Attachments can carry viruses — even PDFs',
     text: 'A scam email arrived with a PDF attachment, and one of us very nearly opened it. The antivirus scanner caught it just in time — phew! The lesson: if an email is unexpected, do not open the file. Your scanner is a safety net, not a guarantee.',
   },
