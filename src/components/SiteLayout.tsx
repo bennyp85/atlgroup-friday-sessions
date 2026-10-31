@@ -5,6 +5,8 @@ const navItems = [
   { to: '/', label: 'Home', end: true },
   { to: '/sessions', label: 'Sessions' },
   { to: '/program', label: 'Program' },
+  { to: '/phone-guide', label: 'Phone guide' },
+  { to: '/link-to-windows', label: 'Link to Windows' },
   { to: '/about', label: 'About' },
 ]
 
