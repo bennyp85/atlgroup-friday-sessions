@@ -68,6 +68,103 @@ const DRIVE = {
 
 export const sessions: Session[] = [
   {
+    id: 't4w5',
+    term: 'Term 4 2026',
+    week: 5,
+    dateLabel: 'Friday 13 November 2026',
+    title: 'Our Digital Life — eScripts, Payments & the Big Quiz',
+    tagline:
+      'A packed Friday: eScripts and the difference between pension and seniors cards, PayPal vs BPAY, recycling old devices at Officeworks — and a term quiz that proved how much the group has kept. Plus the 25% storage rule, smart TV fixes with an AI search, and taming a full message bank.',
+    topics: [
+      'eScripts — getting medicine without the paper prescription',
+      'Pension Concession Card vs Seniors Card — what each one gives us',
+      'Paying online: PayPal vs BPAY — when each one shines',
+      'The ATLGroup Term 4 quiz — and how much we remembered',
+      'Handing old devices to Officeworks for recycling',
+      'PowerPal — watching home electricity use from an app',
+      'The 25% rule: why a full phone stops updating',
+      'Smart TV connection problems and fixing them with an AI search',
+      'Coming up: Gmail management (labels and the 30-day bin) and clearing message bank',
+    ],
+    discussion: [
+      'How did the quiz feel — and what did it prove about what we have learned together?',
+      'How does everyone pay bills and shop online today — bank, BPAY or PayPal?',
+      'What should we cover when we look at Gmail management together?',
+    ],
+    walkthroughs: [
+      {
+        title: 'Check your storage — the 25% rule',
+        intro:
+          'A phone or tablet with a full drive cannot update, and updates are our security lifeline. Two minutes in Settings tells us where we stand.',
+        steps: [
+          { title: 'Open Settings', detail: 'Tap the gear icon, or swipe down twice and tap the gear in quick settings.' },
+          { title: 'Find Storage', detail: 'Scroll to Storage (on Samsung phones: Battery and device care → Storage).' },
+          { title: 'Read the bar', detail: 'It shows what is using the space — photos, apps, downloads.' },
+          { title: 'Aim to keep 25% free', detail: 'If the bar is nearly full, delete old downloads and unused apps, or let Google Photos back up (and free) your pictures.' },
+          { title: 'Re-check after a clean-out', detail: 'Watch the bar shrink. A phone with breathing room updates happily.' },
+        ],
+      },
+      {
+        title: 'Fix things with an AI search',
+        intro:
+          'When the smart TV would not connect, we asked an AI search instead of guessing. The trick is describing the problem in plain words — and changing one thing at a time.',
+        steps: [
+          { title: 'Describe the problem plainly', detail: 'In Google (or Gemini), type what is happening in everyday words: “smart TV connected to wifi but no internet”.' },
+          { title: 'Read the top answers', detail: 'Look for the simple suggestions that keep appearing — the same fix showing up twice is usually the right one.' },
+          { title: 'Try one fix at a time', detail: 'Change one thing (restart the router, re-enter the Wi-Fi password), then test. Small steps beat one big guess.' },
+          { title: 'Not fixed? Add a detail and search again', detail: 'Each extra detail — the TV brand, an error message — sharpens the answer.' },
+          { title: 'Still stuck? Bring it to Friday', detail: 'Twenty heads are better than one search box.' },
+        ],
+      },
+      {
+        title: 'Clear a full message bank',
+        intro:
+          'When voicemail fills up, callers cannot leave messages — and may not even know. Every carrier has its own access number; the dance is the same.',
+        steps: [
+          { title: 'Find your carrier’s voicemail number', detail: 'Check your carrier’s app or website — commonly 101 for Telstra, 321 for Optus, 121 for Vodafone.' },
+          { title: 'Dial it like a normal call', detail: 'Call the number from your own phone. It may ask for a PIN set up long ago — carriers can reset a forgotten one.' },
+          { title: 'Listen, then delete one by one', detail: 'Follow the prompts — usually a key like 3 or 7 deletes each message. Most carriers still make us clear them one at a time.' },
+          { title: 'Hang up and test', detail: 'Have a friend leave a quick message to prove the bank is accepting messages again.' },
+        ],
+      },
+    ],
+    lessons: [
+      {
+        title: 'A full phone stops learning',
+        text: 'Updates need room to move into. A device with all its storage used cannot update — and an un-updated device is an open door. Keeping about a quarter of the storage free keeps everything flowing.',
+      },
+      {
+        title: 'Wipe before you hand over',
+        text: 'Officeworks will take old phones, tablets, laptops and even TVs for recycling — brilliant. But first: sign out of accounts and do a factory reset, so our photos and logins do not leave with the device.',
+      },
+      {
+        title: 'The quiz proved it — we are retaining this',
+        text: 'The Term 4 quiz showed the group remembering what we have covered together. A little cognitive load, worked through side by side, is exactly how confidence sticks.',
+      },
+      {
+        title: 'Watch the meter without squinting',
+        text: 'PowerPal is a free app that pairs with a home smart electricity meter and shows usage in plain, friendly charts — handy for spotting what is quietly costing us.',
+      },
+    ],
+    faq: [
+      {
+        q: 'What is the difference between a pension card and a seniors card?',
+        a: 'The Pensioner Concession Card comes from Centrelink and is based on income — it brings the bigger discounts, including on medicines. The Seniors Card is simply for being over 60 (or pension age) and gives discounts on things like transport and local businesses. Many of us qualify for one, the other, or both.',
+      },
+      {
+        q: 'Should I pay with PayPal or BPAY?',
+        a: 'They solve different problems. PayPal hides your card details from online shops and adds buyer protection — great for eBay and unfamiliar stores. BPAY pays bills straight from your bank using the biller code on the bill — simple and direct for utilities and council bills.',
+      },
+      {
+        q: 'What is an eScript, exactly?',
+        a: 'Instead of a paper prescription, the doctor sends a digital token — a QR code by SMS or email. The pharmacist scans it and the medicine is dispensed. Nothing physical to lose, and repeats live on your phone.',
+      },
+    ],
+    resources: [],
+    status: 'recap',
+    highlight: true,
+  },
+  {
     id: 't4w4',
     term: 'Term 4 2026',
     week: 4,
@@ -147,7 +244,6 @@ export const sessions: Session[] = [
       { label: 'Android Help — official guides from Google', url: 'https://support.google.com/android', kind: 'link' },
     ],
     status: 'recap',
-    highlight: true,
   },
   {
     id: 't4w3',
